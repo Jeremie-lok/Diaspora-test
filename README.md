@@ -4,7 +4,7 @@ Page web officielle de l’appel à projets « Diaspora JBA ».
 
 ## Liens
 - Site (production) : https://taupe-kelpie-77317a.netlify.app/
-- Site (test) : https://...netlify.app
+- Site (test) : https://jeremie-lok.github.io/Diaspora-test/
 
 ## Structure
 - index.html : page principale
