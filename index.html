@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appel à Projets 2026 — Diaspora JBA (CeReBa)</title>
+  <meta name="description" content="Appel à projets 2026 — Dispositif Diaspora JBA (CeReBa). Candidature en ligne, accompagnement, subvention non remboursable, réseau et visibilité." />
+
+  <!-- Simple, clean styling (no external CSS needed) -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#eaf0ff;
+      --muted:#b6c2e2;
+      --accent:#6ea8fe;
+      --accent2:#7ee2b8;
+      --danger:#ff6b6b;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background: radial-gradient(1000px 600px at 20% -10%, rgba(110,168,254,.35), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(126,226,184,.25), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px;}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; gap:10px; align-items:center; text-decoration:none;}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    .logo-img{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  object-fit:cover;
+  box-shadow: var(--shadow);
+  display:block;
+  flex: 0 0 38px;
+}
+    .brand strong{letter-spacing:.2px}
+    .menu{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+    .menu a{opacity:.9; text-decoration:none; font-size:14px; padding:8px 10px; border-radius:12px}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 14px; border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      text-decoration:none; font-weight:600;
+    }
+    .btn.primary{
+      border-color: rgba(110,168,254,.45);
+      background: linear-gradient(135deg, rgba(110,168,254,.35), rgba(126,226,184,.20));
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .hero{padding:46px 0 18px;}
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: 1.3fr .7fr;
+      align-items:start;
+    }
+    @media (max-width: 880px){
+      .grid{grid-template-columns:1fr}
+      .menu{display:none}
+    }
+    h1{margin:0 0 10px; font-size:38px; line-height:1.1}
+    .lead{color:var(--muted); font-size:16px; margin:0 0 16px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 0}
+    .pill{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      font-size:13px; color:var(--muted)
+    }
+    .card{
+      background: rgba(17,26,46,.75);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .cards{display:grid; gap:14px; grid-template-columns: repeat(2, minmax(0,1fr));}
+    @media (max-width: 700px){ .cards{grid-template-columns:1fr} }
+    .kpi{display:grid; gap:10px}
+    .kpi strong{font-size:18px}
+    .muted{color:var(--muted)}
+    section{padding:20px 0}
+    section h2{margin:0 0 10px; font-size:22px}
+    ul{margin:10px 0 0 18px}
+    .table{
+      width:100%; border-collapse:separate; border-spacing:0;
+      overflow:hidden; border-radius:16px; border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .table th,.table td{
+      padding:12px 12px; border-bottom:1px solid var(--border);
+      vertical-align:top;
+      font-size:14px;
+    }
+    .table th{color:var(--muted); text-align:left; font-weight:700}
+    .table tr:last-child td{border-bottom:none}
+    .tag{
+      display:inline-block; font-size:12px; color:var(--muted);
+      border:1px solid var(--border); padding:4px 8px; border-radius:999px;
+      background: rgba(255,255,255,.05);
+      margin-right:6px;
+    }
+    .note{
+      border-left:3px solid rgba(110,168,254,.55);
+      padding:10px 12px; margin-top:10px;
+      background: rgba(110,168,254,.08);
+      border-radius:12px;
+      color:var(--muted);
+    }
+    .iframe{
+      width:100%;
+      min-height:900px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background: rgba(0,0,0,.15);
+    }
+    footer{
+      margin-top:50px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+    <img src="logo.jpeg" alt="Logo CeReBa" class="logo-img" />
+      <div>
+        <strong>Diaspora JBA — Appel à projets 2026</strong><br/>
+        <span class="muted" style="font-size:12px;">CeReBa</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="#eligibilite">Éligibilité</a>
+      <a href="#soutien">Soutien</a>
+      <a href="#calendrier">Calendrier</a>
+      <a href="#postuler">Postuler</a>
+      <a href="#ressources">Ressources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn primary" href="https://bit.ly/3NZLZE8">Candidater</a>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid">
+      <div>
+        <h1>Appel à Projets 2026 — <span style="color:var(--accent)">Diaspora JBA</span></h1>
+        <p class="lead">
+          Le dispositif « Diaspora JBA » (CeReBa) soutient des projets innovants portés par des jeunes,
+          avec une subvention non remboursable, un accompagnement de 3 mois et l’accès à un réseau de partenaires.
+        </p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn primary" href="https://bit.ly/3NZLZE8">Remplir le formulaire</a>
+          <!-- TODO: si tu veux aussi un lien direct vers le formulaire (non embed) -->
+          <a class="btn" href="https://bit.ly/3NZLZE8" target="_blank" rel="noopener">Ouvrir le formulaire (nouvel onglet)</a>
+        </div>
+
+        <div class="pillrow">
+          <span class="pill">Individuel ou équipe</span>
+          <span class="pill">Idéation • Prototype • Déploiement initial</span>
+          <span class="pill">Tous domaines • Impact positif mesurable</span>
+        </div>
+      </div>
+
+      <aside class="card kpi">
+        <strong>À retenir</strong>
+        <div><span class="tag">Candidature</span> 100% en ligne</div>
+        <div><span class="tag">Soutien</span> Subvention + accompagnement 03 mois</div>
+        <div><span class="tag">Sélection</span> Présélections + Pitch final</div>
+        <div class="note">
+          <strong>Astuce :</strong> prépare ton résumé, ton calendrier et ton budget avant de remplir le formulaire.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ÉLIGIBILITÉ -->
+  <section id="eligibilite">
+    <h2>Qui peut candidater ?</h2>
+    <div class="card">
+      <p class="muted" style="margin-top:0">
+        Cet appel s’adresse aux porteurs de projet individuels ou en équipe, avec des projets en phase d’idéation,
+        de prototypage ou de déploiement initial.
+      </p>
+      <h3 style="margin:14px 0 8px; font-size:16px;">Critères d’éligibilité</h3>
+      <ul> 
+        <li>Être <strong>un étudiant du premier cycle ressortissant</strong> de l’Église Baptiste d’Avogbanna.</li>
+        <li>	Manifester un intérêt réel pour l’entrepreneuriat (motivation, démarche, volonté de structurer le projet).</li>
+        <li>Présenter un projet <strong>innovant</strong>, dans n’importe quel domaine, à <strong>impact positif et mesurable</strong>.</li>
+        <li>Être disponible et s’engager à suivre rigoureusement les étapes du programme.</li>
+      </ul>
+      <div class="note">
+        <strong> NB :</strong> Le justificatif de ressortissant de l'église Baptiste d'Avogbanna est obligatoire.
+      </div>
+    </div>
+  </section>
+
+  <!-- SOUTIEN -->
+  <section id="soutien">
+    <h2>Modalités de soutien pour les lauréats</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:28%;">Type de soutien</th>
+          <th>Détails</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Soutien financier</strong></td>
+          <td>Une <strong>subvention financière non remboursable</strong> Attribution d’une subvention financière non remboursable
+            destinée au développement opérationnel des 3 projets sélectionnés, selon les modalités, la taille de l’impact du projet.</td>
+        </tr>
+        <tr>
+          <td><strong>Accompagnement</strong></td>
+          <td>
+            Mise en place d’un programme de formation pré-financement et d’un accompagnement post-financement <strong> d’une durée d’un mois </strong> comprenant :
+            (i) mentorat individuel, (ii) ateliers thématiques (modèle économique/business model, communication, levée de fonds, etc.),
+            (iii) suivi personnalisé et points d’étape.  </td> 
+        </tr>
+        <tr>
+          <td><strong>Accès au réseau</strong></td>
+          <td>Intégration au réseau de partenaires, d’experts sectoriels et d’investisseurs à fort impact.</td>
+        </tr>
+        <tr>
+          <td><strong>Visibilité & communication</strong></td>
+          <td>Mise en avant des projets lauréats sur nos canaux de communication (notamment réseaux sociaux).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- PROCESS + CALENDRIER -->
+  <section id="calendrier">
+    <h2>Processus & calendrier</h2>
+
+    <div class="cards">
+      <div class="card">
+        <strong>Étapes du processus</strong>
+        <ol class="muted" style="margin-top:10px;">
+          <li>Lancement de l’appel à projets</li>
+          <li>Recevabilité + attribution d’un numéro d’identification aux projets éligibles</li>
+          <li>Première présélection</li>
+          <li>Séance d’information & coaching + accès au canevas de modèle économique</li>
+          <li>Soumission du plan d’affaires & présélection des 3 meilleurs projets</li>
+          <li>Pitching final, classement et attribution des fonds</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <strong>Calendrier indicatif</strong>
+        <p class="muted" style="margin:10px 0 0;">
+          (Remplace les champs ci-dessous par tes dates officielles)
+        </p>
+        <ul class="muted">
+          <li>Lancement : <strong>DU 23/02/26 au 01/03/26</strong></li>
+          <li>Date limite : <strong>01/03/2026</strong> à 23h59'</li>
+          <li>Analyse & 1ère présélection : <strong>Du 02/03/26 au 04/03/26</strong></li>
+          <li>Formation plan d’affaires : <strong>07/ 03/2026</strong></li>
+          <li>Dépôt plans + 2ème présélection : <strong>07/ 03/2026</strong></li>
+          <li>Pitching : <strong>07/03/26 au 15/03/26</strong></li>
+          <li>Annonce lauréats : <strong>27/03/26 au 30/03/26</strong></li>
+          <li>Début accompagnement : <strong>13/04/2026</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTULER -->
+  <section id="postuler">
+    <h2>Comment postuler ?</h2>
+    <div class="card">
+      <p class="muted" style="margin-top:0">
+        La candidature s’effectue exclusivement en ligne via le formulaire dédié.
+        Prépare à l’avance : informations du porteur, présentation du projet, mise en œuvre, besoins (budget/soutien recherché).
+      </p>
+
+      <h3 style="margin:14px 0 8px; font-size:16px;">Formulaire de candidature</h3>
+
+      <!-- TODO: remplacer l'URL par le lien EMBED du Google Form (voir instructions juste après) -->
+      <iframe class="iframe"
+        src="https://bit.ly/3NZLZE8"
+        frameborder="0" marginheight="0" marginwidth="0">
+        Chargement…
+      </iframe>
+
+      <div class="note">
+        Si l’intégration ne s’affiche pas, utilise le bouton “Ouvrir le formulaire” en haut de page.
+      </div>
+    </div>
+  </section>
+
+  <!-- CRITÈRES -->
+  <section id="selection">
+    <h2>Critères de sélection</h2>
+    <div class="card">
+      <ul>
+        <li>Pertinence et adéquation avec les objectifs du présent appel.</li>
+        <li>Innovation et valeur ajoutée de la solution proposée.</li>
+        <li>Faisabilité et capacité de mise en œuvre (équipe, planning, ressources).</li>
+        <li>Impact potentiel et durabilité du projet.</li>
+        <li>Clarté et qualité de la candidature.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section id="ressources">
+    <h2>Ressources utiles</h2>
+    <div class="card">
+      <p class="muted" style="margin-top:0">
+        Télécharge ici les modèles pour préparer ton dossier (plan d’affaires, budget, etc.).
+      </p>
+
+      <!-- TODO: mets des liens Google Drive/Docs ou ton site -->
+      <ul>
+        <li><a href="https://docs.google.com/document/d/19ljz33SgNCLYPXQSEuQy-Lv02DRspiwD/edit?usp=sharing&ouid=108641024638225938416&rtpof=true&sd=true" target="_blank" rel="noopener"><strong>Formulaire de candidature</strong></a></li>
+        <li><a href="https://docs.google.com/document/d/1ex5c4vUKRX2neX5JLozGksJz5CGLIdN-/edit?usp=drive_link&ouid=108641024638225938416&rtpof=true&sd=true" target="_blank" rel="noopener"><strong>Modèle de Budget prévisionnel</strong></a></li>
+        <li><a href="https://docs.google.com/document/d/1gXjC7u6T23eodJVtzuF567qvBzFy6ShHfJaRPLiSt6A/edit?usp=sharing" target="_blank" rel="noopener"><strong>Appel à projet 2026</strong></a></li>
+      </ul>
+
+      <div class="note">
+          Pensez à convertir les fichiers en pdf avant la soumission de votre candidature
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p class="muted" style="margin-top:0">
+        Pour toute question technique ou demande de précision, contactez exclusivement :
+      </p>
+      <p>
+        <strong>Email :</strong> <a href="likabeldimon@gmail.com">likabeldimon@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 — CeReBa • Dispositif Diaspora JBA. Tous droits réservés.
+  </footer>
+</main>
+
+<script>
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
