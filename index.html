@@ -21,6 +21,34 @@
       --radius:18px;
       --max:1100px;
     }
+    /* Variante claire uniquement pour la zone Postuler */
+.card-light{
+  background:#ffffff !important;
+  color:#111827 !important;           /* texte noir */
+  border:1px solid #e5e7eb !important;
+}
+
+.card-light .muted{
+  color:#374151 !important;           /* gris foncé lisible */
+}
+
+.card-light a{
+  color:#0b5fff;                       /* liens bleus */
+}
+
+/* Boutons dans la zone claire */
+.card-light .btn{
+  background:#f3f4f6 !important;
+  color:#111827 !important;
+  border:1px solid #e5e7eb !important;
+}
+
+.card-light .btn.primary{
+  background:#0b5fff !important;
+  color:#ffffff !important;
+  border-color:#0b5fff !important;
+}
+
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -306,7 +334,7 @@
  <section id="postuler">
   <h2>Comment postuler ?</h2>
 
-  <div class="card">
+ <div class="card card-light">
     <p class="muted">
       La candidature s’effectue exclusivement en ligne via un formulaire dédié.
       Nous vous recommandons de préparer vos informations (porteur, projet, budget, impact)
@@ -398,6 +426,7 @@
 </script>
 </body>
 </html>
+
 
 
 
